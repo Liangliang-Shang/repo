@@ -28,3 +28,21 @@ start a working area (see also: git help tutorial)
 # Config
 * `git config --global user.name "Liangliang"`
 * `git config --global user.email "liangliang.shang@icloud.com"`
+# Local Repository
+## Init
+```
+@Liangliang-Shang ➜ ~ $ mkdir test && cd test
+
+@Liangliang-Shang ➜ ~/test $ git status			           # keep tracking
+fatal: not a git repository (or any of the parent directories): .git
+
+@Liangliang-Shang ➜ ~/test $ git init .			           # init a repo: ~/test
+Initialized empty Git repository in /home/codespace/test/.git/
+
+@Liangliang-Shang ➜ ~/test (main) $ git status
+On branch main
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+```
