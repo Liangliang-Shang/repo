@@ -46,3 +46,21 @@ No commits yet
 
 nothing to commit (create/copy files and use "git add" to track)
 ```
+## Config
+```
+@Liangliang-Shang ➜ ~/test (main) $ git config --local core.editor vim
+
+@Liangliang-Shang ➜ ~/test (main) $ git config --list --show-origin --show-scope
+system  file:/etc/gitconfig     init.defaultbranch=main
+system  file:/etc/gitconfig     filter.lfs.smudge=git-lfs smudge -- %f
+system  file:/etc/gitconfig     filter.lfs.process=git-lfs filter-process
+system  file:/etc/gitconfig     filter.lfs.required=true
+system  file:/etc/gitconfig     filter.lfs.clean=git-lfs clean -- %f
+global  file:/home/codespace/.gitconfig user.name=Liangliang
+global  file:/home/codespace/.gitconfig user.email=liangliang.shang@icloud.com
+local   file:.git/config        core.repositoryformatversion=0
+local   file:.git/config        core.filemode=true
+local   file:.git/config        core.bare=false
+local   file:.git/config        core.logallrefupdates=true
+local   file:.git/config        core.editor=vim
+```
