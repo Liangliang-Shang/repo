@@ -68,3 +68,59 @@ local   file:.git/config        core.editor=vim
 ## Index/Staging Area
 ## Repository
 ![](https://pic4.zhimg.com/80/v2-a933cd4bb34672899ffd5a30cccdce03_720w.webp)
+## File Status
+* **`Untracked`**
+  ```bash
+	@Liangliang-Shang ➜ ~/test (main) $ git log
+	fatal: your current branch 'main' does not have any commits yet
+
+	@Liangliang-Shang ➜ ~/test (main) $ git reflog
+	fatal: your current branch 'main' does not have any commits yet
+
+	@Liangliang-Shang ➜ ~/test (main) $ touch hello2git	           # New file - Untracked to GIT!
+
+	@Liangliang-Shang ➜ ~/test (main) $ git status
+	On branch main
+	
+	No commits yet
+	
+	Untracked files:
+	  (use "git add <file>..." to include in what will be committed)
+	        hello2git
+	
+	nothing added to commit but untracked files present (use "git add" to track)
+  ```
+* **`Cached`**
+  ```bash
+	@Liangliang-Shang ➜ ~/test (main) $ git add hello2git 
+
+	@Liangliang-Shang ➜ ~/test (main) $ git status
+	On branch main
+	
+	No commits yet
+	
+	Changes to be committed:
+	  (use "git rm --cached <file>..." to unstage)
+	        new file:   hello2git
+  ```
+* **`Committed`**
+  ```bash
+	@Liangliang-Shang ➜ ~/test (main) $ git commit -m "New file: hello2git"
+           [main (root-commit) dffcb0f] New file: hello2git
+            1 file changed, 0 insertions(+), 0 deletions(-)
+            create mode 100644 hello2git
+  
+           @Liangliang-Shang -> ~/test (main) $ git status
+           On branch main
+           nothing to commit, working tree clean
+  
+           @Liangliang-Shang -> ~/test (main) $ git log
+           commit dffcb0fa795b3de3c26612395b6698c55bb50e5f (HEAD -> main)
+           Author: Liangliang <liangliang.shang@icloud.com>
+           Date:   Sun Feb 25 14:11:55 2024 +0800
+           
+               New file: hello2git
+  
+           @Liangliang-Shang -> ~/test (main) $ git reflog
+           dffcb0f (HEAD -> main) HEAD@{0}: commit (initial): New file: hello2git
+  ```
