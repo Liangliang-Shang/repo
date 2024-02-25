@@ -64,3 +64,7 @@ local   file:.git/config        core.bare=false
 local   file:.git/config        core.logallrefupdates=true
 local   file:.git/config        core.editor=vim
 ```
+## Working Directory
+## Index/Staging Area
+## Repository
+![](https://pic4.zhimg.com/80/v2-a933cd4bb34672899ffd5a30cccdce03_720w.webp)
